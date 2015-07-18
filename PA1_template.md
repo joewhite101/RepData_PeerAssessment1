@@ -39,7 +39,7 @@ activityByDay <- aggregate(activityClean[,c("steps")],by=list(activityClean$date
 ###2. Make a histogram of the total number of steps taken each day
 
 ```r
-hist(activityByDay$x, xlab="Steps Der Day", main="Histogram of Steps Per Day", ylab="Num Steps")
+hist(activityByDay$x, xlab="Steps Der Day", main="Histogram of Steps Per Day", ylab="Num of Days")
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-6-1.png) 
@@ -122,7 +122,7 @@ for (i in missing){
 
 ```r
 imputedByDay <- aggregate(imputedDataSet[,c("steps")],by=list(imputedDataSet$date),"sum")
-hist(imputedByDay$x, xlab="Steps Der Day", main="Histogram of Steps Per Day", ylab="Num Steps")
+hist(imputedByDay$x, xlab="Steps Der Day", main="Histogram of Imputed Steps Per Day", ylab="Num Days")
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-13-1.png) 
