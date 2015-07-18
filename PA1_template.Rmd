@@ -139,7 +139,7 @@ activityByDayTypeByInterval[activityByDayTypeByInterval$Group.2==TRUE,4] <- "Wee
 The lattice package xyplot is used to create a panel plot showing the mean steps by interval for Weekday vs Weekend.
 
 ```{r}
-xyplot(activityByDayTypeByInterval$x ~ activityByDayTypeByInterval$Group.1 | activityByDayTypeByInterval$V4, activityByDayTypeByInterval,type="l", xlab="Activity Interval in Day", ylab="Mean of Steps by Interval", main="Mean Steps by Weekday vs Weekend by Interval")
+xyplot(activityByDayTypeByInterval$x ~ activityByDayTypeByInterval$Group.1 | activityByDayTypeByInterval$V4, layout=c(1,2),activityByDayTypeByInterval,type="l", xlab="Activity Interval in Day", ylab="Mean of Steps by Interval", main="Mean Steps by Weekday vs Weekend by Interval")
 
 ```
 

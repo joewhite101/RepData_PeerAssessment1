@@ -154,7 +154,7 @@ The median moved slightly towards the mean because we added many values exactly 
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
-###1Create a new factor variable in the dataset with two levels - "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
+###1. Create a new factor variable in the dataset with two levels - "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
 
 This section creates a boolean variable based on the is.weekend() function from the chron library. Then a factor variable is added to the data set  to hold the Weekday and Weekend factor values.
 
@@ -172,7 +172,7 @@ The lattice package xyplot is used to create a panel plot showing the mean steps
 
 
 ```r
-xyplot(activityByDayTypeByInterval$x ~ activityByDayTypeByInterval$Group.1 | activityByDayTypeByInterval$V4, activityByDayTypeByInterval,type="l", xlab="Activity Interval in Day", ylab="Mean of Steps by Interval", main="Mean Steps by Weekday vs Weekend by Interval")
+xyplot(activityByDayTypeByInterval$x ~ activityByDayTypeByInterval$Group.1 | activityByDayTypeByInterval$V4, layout=c(1,2),activityByDayTypeByInterval,type="l", xlab="Activity Interval in Day", ylab="Mean of Steps by Interval", main="Mean Steps by Weekday vs Weekend by Interval")
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-17-1.png) 
